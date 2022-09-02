@@ -20,8 +20,7 @@ namespace GradeBook.GradeBooks
             }
 
             var studentsDesc = Students.OrderByDescending(x => x.AverageGrade).ToList();
-            double studentsCount = Students.Count;
-            var gradeJump = Convert.ToInt32(studentsCount / 5);
+            var gradeJump = Convert.ToInt32(Students.Count / 5);
 
             if (averageGrade < studentsDesc[gradeJump].AverageGrade)
             {
